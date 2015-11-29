@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-US" ng-app="cardApp">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Business Card Creator</title>
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- Custom CSS -->
+		<link href="css/style.css" rel="stylesheet">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<div class="container text-center">
+					<!-- <h1><a href="">Business Card Creator</a></h1> -->
+				</div>
+			</div>
+
+			<div ng-controller="cardCreatorController" class="row">
+				<div class="col-sm-6">
+					<form role="form">
+						<legend>Input Information</legend>
+					
+						<div class="form-group">
+							<label for="">Full Name</label>
+							<input ng-model="info.fullName" type="text" class="form-control" id="" placeholder="Enter your full name">
+						</div>
+
+						<div class="form-group">
+							<label for="">Title</label>
+							<input ng-model="info.jobTitle" type="text" class="form-control" id="" placeholder="Enter your job title">
+						</div>
+
+						<div class="form-group">
+							<label for="">Phone</label>
+							<input ng-model="info.phone" type="text" class="form-control" id="" placeholder="Enter your phone no.">
+						</div>
+
+						<div class="form-group">
+							<label for="">Email</label>
+							<input ng-model="info.email" type="text" class="form-control" id="" placeholder="Enter your email">
+						</div>
+
+						<div class="form-group">
+							<label for="">Organization</label>
+							<input ng-model="info.orgName" type="text" class="form-control" id="" placeholder="Enter your organization name">
+						</div>
+
+						<div class="form-group">
+							<label for="">Organization Website</label>
+							<input ng-model="info.orgWeb" type="text" class="form-control" id="" placeholder="Enter your organization website address">
+						</div>
+
+						<div class="form-group">
+							<label for="">Organization Address</label>
+							<textarea ng-model="info.orgAddress" class="form-control" ></textarea>
+						</div>
+					
+						<button type="submit" class="btn btn-info pull-right">Create Card</button>
+					</form>
+				</div>
+
+				<div class="col-sm-6">
+					<legend>Output</legend>
+
+					<div id="card-container">
+						<div card-front></div>
+						<div card-back></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- AngularJS -->
+		<script src="js/angular.min.js"></script>
+		<!-- Custom JS -->
+		<script src="js/script.js"></script>
+	</body>
+</html>
