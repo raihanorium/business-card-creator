@@ -6,7 +6,7 @@
 	width: 340px;
 	height: 188px;
 	margin: 10px;
-	background-color: #333;
+	background-color: #000;
 	color: #fff;
 
 	-webkit-border-radius: 10px;
@@ -20,7 +20,7 @@
 .card-front #logo img{max-height: 50px;}
 
 .card-front #shadow{
-	background-color: #000;
+	background-color: #333;
 	height: 70%; width: 100%;
 	position: absolute;
 	bottom: 0;
@@ -45,4 +45,47 @@
 	position: absolute;
 	right: 150px;
 	top: 10px;
+	max-width: 180px;
+	overflow: hidden;
+}
+.card-front #jobinfo{
+	font-family: arial;
+	font-size: 11px;
+	position: absolute;
+	right: 150px;
+	top: 28px;
+	text-align: right;
+	line-height: 1.1;
+	max-width: 180px;
+	overflow: hidden;
+}
+
+.card-front .separator{
+	width: 100%;
+	border: 1px solid #000;
+	position: absolute;
+	top: 80px;
+}
+
+.card-front #org-info{
+	position: absolute;
+	top: 80px;
+	margin: 5px 0 0 10px;
+}
+
+.card-front #org-info #web{
+	font-family: arial;
+	font-size: 12px;
+}
+
+.card-front #org-address{
+	font-family: arial;
+	font-size: 10px;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	max-width: 180px;
+	margin: 5px 10px 0 0;
+	text-align: right;
+	color: #ccc;
 }
