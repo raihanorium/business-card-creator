@@ -24,6 +24,24 @@ var cardApp = angular.module('cardApp', ['naif.base64', 'ja.qr'])
 			+ '\nEND:VCARD';
 		});
 
+		$scope.createCard = function() {
+			html2canvas([document.getElementById('card-container')], {
+			    onrendered: function (canvas) {
+			        var data = canvas.toDataURL('image/png');
+			        
+			        var image = new Image();
+			        image.src = data;
+
+			        var pom = document.createElement('a');
+					pom.setAttribute('href', data);
+					pom.setAttribute('download', $scope.info.orgName + '_card.png');
+					pom.style.display = 'none';
+					document.body.appendChild(pom);
+					pom.click();
+					document.body.removeChild(pom); 
+			    }
+			});
+		}
 	}])
 
 	.directive('cardFront', [function () {
@@ -32,3 +50,11 @@ var cardApp = angular.module('cardApp', ['naif.base64', 'ja.qr'])
 			templateUrl: 'card-front.html'
 		};
 	}])
+
+	.directive('cardBack', [function () {
+		return {
+			restrict: 'A',
+			templateUrl: 'card-back.html'
+		};
+	}])
+;

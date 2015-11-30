@@ -1,0 +1,10 @@
+<div class="card card-back">
+	<div id="back-container">
+		<div id="logo">
+			<p ng-hide="info.orgLogo.base64">{{logo}}</p>
+			<img ng-show="info.orgLogo.base64" src="{{'data:' + info.orgLogo.filetype + ';base64,' + info.orgLogo.base64}}" alt="logo">
+		</div>
+
+		<div id="web">{{info.orgWeb}}</div>
+	</div>
+</div>

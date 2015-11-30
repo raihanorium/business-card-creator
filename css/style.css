@@ -89,3 +89,29 @@
 	text-align: right;
 	color: #ccc;
 }
+
+.card-back{
+	background-color: #000;
+}
+.card-back #back-container{text-align: center;}
+.card-back #logo img{height: 80px; margin-top: 30px;}
+.card-back #web{margin-top: 10px; font-size: 15px;}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #aaa;
+  padding-top: 10px;
+}
