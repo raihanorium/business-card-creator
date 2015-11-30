@@ -4,7 +4,9 @@
 		<img ng-show="info.orgLogo.base64" src="{{'data:' + info.orgLogo.filetype + ';base64,' + info.orgLogo.base64}}" alt="logo">
 	</div>
 
-	<div id="qr">QR</div>
+	<div id="qr">
+		<qr text="qrcodeString" size="110"></qr>
+	</div>
 
 	<div id="shadow">
 		<div id="full-name">{{info.fullName}}</div>
