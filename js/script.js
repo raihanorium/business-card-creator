@@ -1,7 +1,7 @@
-var cardApp = angular.module('cardApp', [])
+var cardApp = angular.module('cardApp', ['naif.base64'])
 
 	.controller('cardCreatorController', ['$scope', function($scope){
-		$scope.logo = 'LOGO'
+		$scope.logo = 'LOGO';
 	}])
 
 	.directive('cardFront', [function () {

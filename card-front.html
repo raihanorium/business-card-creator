@@ -1,5 +1,8 @@
 <div class="card card-front">
-	<div id="logo">{{logo}}</div>
+	<div id="logo">
+		<p ng-hide="info.orgLogo.base64">{{logo}}</p>
+		<img ng-show="info.orgLogo.base64" src="{{'data:' + info.orgLogo.filetype + ';base64,' + info.orgLogo.base64}}" alt="logo">
+	</div>
 
 	<div id="qr">QR</div>
 

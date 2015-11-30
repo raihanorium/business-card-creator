@@ -16,7 +16,8 @@
 	position: relative;
 }
 
-.card-front #logo{margin: 10px; font-size: +2em;}
+.card-front #logo{margin: 10px; padding-top: 5px; font-size: +2em;}
+.card-front #logo img{max-height: 50px;}
 
 .card-front #shadow{
 	background-color: #000;

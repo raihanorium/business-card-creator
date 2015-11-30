@@ -57,6 +57,11 @@
 						</div>
 
 						<div class="form-group">
+							<label for="">Logo</label>
+							<input type="file" accept="image/*" ng-model="info.orgLogo" base-sixty-four-input class="form-control" id="">
+						</div>
+
+						<div class="form-group">
 							<label for="">Organization Website</label>
 							<input ng-model="info.orgWeb" type="text" class="form-control" id="" placeholder="Enter your organization website address">
 						</div>
@@ -87,6 +92,7 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- AngularJS -->
 		<script src="js/angular.min.js"></script>
+		<script src="js/angular-base64-upload.min.js"></script>
 		<!-- Custom JS -->
 		<script src="js/script.js"></script>
 	</body>
