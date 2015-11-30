@@ -12,7 +12,8 @@ var cardApp = angular.module('cardApp', ['naif.base64', 'ja.qr'])
 		$scope.info.orgWeb = 'www.somecompany.com';
 		$scope.info.orgAddress = '11/2, Some Street,\nDhaka, Bangladesh';
 
-		$scope.qrcodeString = 'BEGIN:VCARD'
+		$scope.$watchCollection('info', function() {
+			$scope.qrcodeString = 'BEGIN:VCARD'
 			+ '\nN:' + $scope.info.fullName
 			+ '\nORG:' + $scope.info.orgName
 			+ '\nTITLE:' + $scope.info.jobTitle
@@ -21,6 +22,8 @@ var cardApp = angular.module('cardApp', ['naif.base64', 'ja.qr'])
 			+ '\nURL:' + $scope.info.orgWeb
 			+ '\nADR:;;' + $scope.info.orgAddress
 			+ '\nEND:VCARD';
+		});
+
 	}])
 
 	.directive('cardFront', [function () {
