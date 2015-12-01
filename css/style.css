@@ -47,6 +47,7 @@
 	top: 10px;
 	max-width: 180px;
 	overflow: hidden;
+	 font-family: arial;
 }
 .card-front #jobinfo{
 	font-family: arial;
