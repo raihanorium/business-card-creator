@@ -1,6 +1,7 @@
 #card-container{
 	border: 1px solid #ccc; overflow: auto;
 	font-family: Impact;
+	background-color: #fff;
 }
 .card{
 	width: 340px;
@@ -41,7 +42,7 @@
 }
 
 .card-front #full-name{
-	font-size: 16px;
+	font-size: 13px;
 	position: absolute;
 	right: 150px;
 	top: 10px;

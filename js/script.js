@@ -20,7 +20,7 @@ var cardApp = angular.module('cardApp', ['naif.base64', 'ja.qr'])
 			+ '\nTEL:' + $scope.info.phone
 			+ '\nEMAIL:' + $scope.info.email
 			+ '\nURL:' + $scope.info.orgWeb
-			+ '\nADR:;;' + $scope.info.orgAddress
+			+ '\nADR:;;' + $scope.info.orgAddress.split('\n').join(';;')
 			+ '\nEND:VCARD';
 		});
 
